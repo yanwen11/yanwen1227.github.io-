@@ -1,0 +1,309 @@
+/* 基本重置 */
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alegreya", serif;
+  background: #d9d9d9;
+}
+
+/* 導覽列樣式 */
+.navbar {
+  width: 1280px;
+  height: 49px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 54px 8px 54px; /* 上、右、下、左邊距都設為 54px */
+  background-color: #796a6a;
+  color: white;
+}
+.icons {
+  display: flex;
+  gap: 16px; /* icon 之間的間距 */
+}
+
+.nav-links {
+  display: flex; /* 啟用 Flexbox */
+  align-items: center; /* 垂直居中對齊 */
+  gap: 165px; /* 每個選單項目之間的間距 */
+  margin-left: 10px;
+  list-style: none; /* 移除預設的項目符號 */
+  padding: 0; /* 移除內邊距 */
+  margin: 0; /* 移除外邊距 */
+}
+.navbar-content {
+  display: inline-flex; /* 讓 icons 和選單橫向排列 */
+  align-items: center; /* 垂直居中對齊 */
+  gap: 62px; /* icon 和選單區塊之間的間距 */
+}
+.nav-links a {
+  text-decoration: none; /* 移除底線 */
+  color: white; /* 文字顏色 */
+  font-size: 20px; /* 字體大小 */
+  font-family: "Alegreya", serif; /* 使用 Alegreya 字體 */
+}
+
+.nav-links a:hover {
+  color: #ff9800; /* 滑鼠懸停時變色 */
+}
+
+.icons a img {
+  width: 24px; /* icon 大小 */
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+.icons a img:hover {
+  transform: scale(1.2); /* icon 放大效果 */
+}
+
+/* 輪播 */
+.carousel-item h5 {
+  font-size: 48px;
+  text-align: left; /* 修改为你需要的字体大小 */
+  padding: 336 124 103 123;
+}
+
+/*小卡*/
+.popular-destinations {
+  width: 1234px;
+  height: 623px;
+  margin: 41px auto;
+  padding: 41px;
+  background-color: #fff;
+  border-radius: 50px;
+}
+
+.popular-destinations .title {
+  display: flex;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 41px;
+
+  text-align: center;
+}
+
+.grid-item img {
+  width: 100%;
+}
+/* 第二小卡 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 水平置中子元素 */
+  justify-content: flex-start; /* 垂直從上開始對齊 */
+  width: 100%; /* 確保父容器占滿可用空間 */
+  margin: 0 auto; /* 保證容器水平居中 */
+  padding: 20px 0; /* 適當上下間距 */
+  box-sizing: border-box;
+}
+
+/* 最新消息區塊(白底) */
+.latest-news {
+  width: 90%; /* 寬度自適應 */
+  width: 1234px;
+  height: 600px; /* 與其他區塊統一最大寬度 */
+  margin: 20px auto; /* 垂直間距 & 水平居中 */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  text-align: center; /* 確保內容置中對齊（若需要） */
+}
+/* 全台熱門景點區塊 */
+.popular-places {
+  width: 90%; /* 寬度自適應 */
+  max-width: 1234px; /* 最大寬度與最新活動資訊一致 */
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* 最新消息標題 */
+.latest-news .title {
+  font-family: "Alegreya", serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #796a6a;
+}
+
+/* 最新消息網格容器 */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 設定為 2 列，每列等寬 */
+  gap: 20px; /* 每個項目之間的間距 */
+  width: 100%;
+}
+
+/* 單個新聞項目 */
+.news-item {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: row; /* 改成橫向排列 */
+  align-items: center;
+  padding: 15px;
+  gap: 15px; /* 圖片和文字之間的間距 */
+}
+
+/* 新聞內容圖片 */
+.news-item img {
+  width: 50%; /* 設定為容器寬度的 50% */
+  height: auto; /* 自動調整高度以保持比例 */
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* 新聞內容文字 */
+.news-item .news-content {
+  flex-grow: 1; /* 文字部分填滿剩餘空間 */
+  text-align: left;
+}
+
+.news-item .news-content p {
+  color: #796a6a;
+  font-family: "Istok Web", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 限制文字顯示兩行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 新聞項目懸停效果 */
+.news-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/*影片*/
+.video-card {
+  width: 90%; /* 自適應寬度 */
+  width: 1234px;
+  height: 650px;
+  margin: 20px auto; /* 垂直間距，居中對齊 */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 30px; /* 圓角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 投影效果 */
+  box-sizing: border-box;
+  text-align: center; /* 內容居中 */
+}
+
+.video-card .video-title {
+  font-family: "Alegreya", serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #796a6a;
+}
+
+.video-card .video-content iframe {
+  width: 100%; /* 影片寬度自適應 */
+  width: 980px;
+  height: 551px;
+  height: auto; /* 高度自動調整 */
+  aspect-ratio: 16 / 9; /* 保持影片比例 */
+  border-radius: 15px; /* 影片邊框圓角 */
+  border: none;
+}
+
+/* Footer 基本樣式 */
+.footer {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-top: 1px solid #ccc;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* 左中右分布 */
+  align-items: flex-start; /* 水平頂端對齊 */
+  max-width: 1234px;
+  margin: 0 auto; /* 居中 */
+  flex-wrap: wrap; /* 行動裝置適應換行 */
+  gap: 20px; /* 區塊間距 */
+}
+
+/* Footer 每個區塊 */
+.footer-section {
+  flex: 1; /* 平均分配空間 */
+  min-width: 200px; /* 區塊最小寬度 */
+}
+
+.footer-section h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-family: "Alegreya", serif;
+  font-weight: bold;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  display: block;
+  margin: 5px 0;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #007bff; /* 滑鼠懸停變色 */
+}
+
+/* 中間內容樣式 */
+.footer-section p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* 社群圖示樣式 */
+.social-icons a {
+  margin-right: 10px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
